@@ -1,7 +1,7 @@
 from flask import Flask, render_template, send_file
 from ffmpeg_streaming import Formats, input
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='lives', static_url_path='/videos')
 
 @app.route("/")
 def index():
